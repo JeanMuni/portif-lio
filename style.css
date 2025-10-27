@@ -1,25 +1,118 @@
-body{
-    font-family: sans-serif;
-    color: blue;
-}
-
-header{
-    text-align: center;
-}
-
-span{
-    background-color: gray;
-    color: white;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-*{
-  padding: 0;
+/* Reset simples */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-p{
-  margin: 10px 0px;
+/* Cores e estilo geral */
+body {
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 40px 20px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.perfil img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+}
+
+.habilidades {
+  margin-top: 30px;
+}
+
+.habilidades ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.habilidades li {
+  background-color: white;
+  color: #0077b6;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Projetos */
+.projetos {
+  padding: 50px 20px;
+}
+
+.projeto {
+  background-color: white;
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projeto a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projeto a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #023e8a;
+  color: white;
+  padding: 30px 10px;
+}
+
+footer a {
+  color: #90e0ef;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .perfil {
+    flex-direction: column;
+  }
+
+  .projeto {
+    width: 90%;
+  }
 }
