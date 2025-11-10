@@ -1,118 +1,173 @@
-/* Reset simples */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio</title>
 
-/* Cores e estilo geral */
-body {
-  background-color: #f4f7fa;
-  color: #333;
-  line-height: 1.6;
-  text-align: center;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-/* Cabeçalho */
-header {
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
-  color: white;
-  padding: 40px 20px;
-}
+  <style>
+    /* Reset simples */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-.perfil {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    /* Cores e estilo geral */
+    body {
+      background-color: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
+      text-align: center;
+    }
 
-.perfil img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 3px solid white;
-  object-fit: cover;
-}
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: white;
+      padding: 40px 20px;
+    }
 
-.habilidades {
-  margin-top: 30px;
-}
+    .perfil {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-.habilidades ul {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  list-style: none;
-  margin-top: 10px;
-}
+    .perfil img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+    }
 
-.habilidades li {
-  background-color: white;
-  color: #0077b6;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-}
+    .habilidades {
+      margin-top: 30px;
+    }
 
-/* Projetos */
-.projetos {
-  padding: 50px 20px;
-}
+    .habilidades ul {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-top: 10px;
+    }
 
-.projeto {
-  background-color: white;
-  margin: 20px auto;
-  max-width: 500px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    .habilidades li {
+      background-color: white;
+      color: #0077b6;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
 
-.projeto a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #0077b6;
-  text-decoration: none;
-  font-weight: bold;
-}
+    /* Projetos: agora em HORIZONTAL */
+    .projetos {
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.projeto a:hover {
-  text-decoration: underline;
-}
+    .projeto {
+      background-color: white;
+      width: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-/* Rodapé */
-footer {
-  background-color: #023e8a;
-  color: white;
-  padding: 30px 10px;
-}
+    .projeto a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-footer a {
-  color: #90e0ef;
-  font-weight: bold;
-  text-decoration: none;
-}
+    .projeto a:hover {
+      text-decoration: underline;
+    }
 
-footer a:hover {
-  text-decoration: underline;
-}
+    /* Rodapé */
+    footer {
+      background-color: #023e8a;
+      color: white;
+      padding: 30px 10px;
+    }
 
-footer p {
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
+    footer a {
+      color: #90e0ef;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-/* Responsividade */
-@media (max-width: 600px) {
-  .perfil {
-    flex-direction: column;
-  }
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-  .projeto {
-    width: 90%;
-  }
-}
+    footer p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .perfil {
+        flex-direction: column;
+      }
+
+      .projeto {
+        width: 90%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="perfil">
+      <img src="https://via.placeholder.com/160" alt="Foto de Perfil">
+      <div>
+        <h1>Seu Nome</h1>
+        <p>Desenvolvedor | Educador | Criador de Projetos</p>
+      </div>
+    </div>
+
+    <div class="habilidades">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Arduino</li>
+        <li>Robótica</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Projetos -->
+  <section class="projetos">
+    
+    <div class="projeto">
+      <h2>Projeto 1</h2>
+      <p>Descrição breve do projeto.</p>
+      <a href="#">Acessar</a>
+    </div>
+
+    <div class="projeto">
+      <h2>Projeto 2</h2>
+      <p>Descrição breve do projeto.</p>
+      <a href="#">
