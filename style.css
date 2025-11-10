@@ -1,178 +1,88 @@
-/* RESET GERAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Prof. Jean</title>
+  <link rel="stylesheet" href="style.css">
 
-/* ===========================
-        TEMA CLARO
-=========================== */
-body {
-  background: #f4f7fa;
-  color: #333;
-  transition: background 0.3s ease, color 0.3s ease;
-}
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
-/* ===========================
-        TEMA ESCURO
-=========================== */
-body.dark {
-  background: #0b1a2a;
-  color: #e6f1ff;
-}
+<body>
 
-/* ===========================
-        CABEÇALHO
-=========================== */
-header {
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
-  color: white;
-  padding: 40px 20px;
-}
+  <header>
+    <div class="perfil">
+      <img src="./imagem/Gemini_Generated_Image_h3l4pnh3l.png" alt="Foto do Jean">
+      <div>
+        <h1>Olá, eu sou o Jean <i class="fa-solid fa-hand-peace"></i></h1>
+        <p>Professor de <strong>Programação e Robótica</strong> apaixonado por tecnologia e inovação.</p>
+        <p>Tenho uma cachorrinha chamada Frida <i class="fa-solid fa-dog"></i> e trabalho na SEED.</p>
+      </div>
+    </div>
+  </header>
 
-.perfil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
+  <main>
 
-.perfil img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 3px solid white;
-  object-fit: cover;
-}
+    <section class="projetos">
+      <h2 class="titulo-projetos">Meus Projetos</h2>
 
-/* ===========================
-          PROJETOS
-=========================== */
-.projetos {
-  padding: 50px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-}
+      <!-- Projeto 1 -->
+      <div class="projeto">
+        <img src="./imagem/projeto-1.png" alt="Projeto 1">
+        <h3>Projeto 1</h3>
+        <p>Projeto de Robótica usando sensores e Arduino.</p>
+        <a href="#" target="_blank">
+          <i class="fa-solid fa-link"></i> Ver projeto
+        </a>
+      </div>
 
-.titulo-projetos {
-  width: 100%;
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
+      <!-- Projeto 2 -->
+      <div class="projeto">
+        <img src="./imagem/projeto-2.png" alt="Projeto 2">
+        <h3>Projeto 2</h3>
+        <p>Site educativo criado em HTML, CSS e JavaScript.</p>
+        <a href="#" target="_blank">
+          <i class="fa-solid fa-link"></i> Ver projeto
+        </a>
+      </div>
 
-/* CARD DO PROJETO */
-.projeto {
-  background: white;
-  width: 300px;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
-  padding-bottom: 20px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border-top: 6px solid #00b4d8;
-}
+      <!-- Projeto 3 -->
+      <div class="projeto">
+        <img src="./imagem/projeto-3.png" alt="Projeto 3">
+        <h3>Projeto 3</h3>
+        <p>Jogo interativo desenvolvido no Scratch.</p>
+        <a href="#" target="_blank">
+          <i class="fa-solid fa-link"></i> Ver projeto
+        </a>
+      </div>
 
-body.dark .projeto {
-  background: #112233;
-  color: white;
-  border-top: 6px solid #48cae4;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
-}
+    </section>
 
-/* IMAGENS DOS PROJETOS */
-.projeto img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
+  </main>
 
-/* ANIMAÇÃO HOVER (3D + Levantar) */
-.projeto:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
+  <footer>
+    <h2>Entre em contato</h2>
 
-/* LINKS */
-.projeto a {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #0077b6;
-}
+    <a href="https://github.com/JeanMuni" target="_blank">
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
 
-body.dark .projeto a {
-  color: #90e0ef;
-}
+    <p>© 2025 - Produzido pelo Prof. Jean</p>
 
-.projeto a:hover {
-  text-decoration: underline;
-}
+    <button id="toggle-dark">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </footer>
 
-/* ===========================
-          FOOTER
-=========================== */
-footer {
-  margin-top: 40px;
-  padding: 25px;
-  background: #023e8a;
-  color: white;
-  text-align: center;
-}
+  <script>
+    const btn = document.getElementById('toggle-dark');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 
-footer a {
-  color: #90e0ef;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* BOTÃO DO MODO ESCURO */
-#toggle-dark {
-  margin-top: 20px;
-  background: #ffffff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-#toggle-dark:hover {
-  transform: scale(1.1);
-}
-
-body.dark #toggle-dark {
-  background: #1e2a38;
-  color: white;
-}
-
-/* ===========================
-        RESPONSIVIDADE
-=========================== */
-@media (max-width: 900px) {
-  .projeto {
-    width: 45%;
-  }
-}
-
-@media (max-width: 600px) {
-  .projeto {
-    width: 90%;
-  }
-
-  .perfil {
-    flex-direction: column;
-  }
-}
+</body>
+</html>
