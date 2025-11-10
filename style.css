@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Cores e estilo geral */
+/* Estilo geral */
 body {
   background-color: #f4f7fa;
   color: #333;
@@ -61,10 +61,17 @@ header {
 /* Projetos */
 .projetos {
   padding: 50px 20px;
+  
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap; /* Mantém bonito no celular */
+}
+
+.titulo-projetos {
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .projeto {
@@ -74,6 +81,13 @@ header {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover */
+.projeto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .projeto a {
@@ -112,7 +126,6 @@ footer p {
 
 /* Responsividade */
 @media (max-width: 600px) {
-
   .perfil {
     flex-direction: column;
   }
