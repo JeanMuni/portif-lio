@@ -1,4 +1,4 @@
-/* Reset simples */
+/* RESET GERAL */
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +6,26 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Estilo geral */
+/* ===========================
+        TEMA CLARO
+=========================== */
 body {
-  background-color: #f4f7fa;
+  background: #f4f7fa;
   color: #333;
-  line-height: 1.6;
-  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Cabeçalho */
+/* ===========================
+        TEMA ESCURO
+=========================== */
+body.dark {
+  background: #0b1a2a;
+  color: #e6f1ff;
+}
+
+/* ===========================
+        CABEÇALHO
+=========================== */
 header {
   background: linear-gradient(135deg, #0077b6, #00b4d8);
   color: white;
@@ -23,10 +34,10 @@ header {
 
 .perfil {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 25px;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
 .perfil img {
@@ -37,76 +48,83 @@ header {
   object-fit: cover;
 }
 
-.habilidades {
-  margin-top: 30px;
-}
-
-.habilidades ul {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  list-style: none;
-  margin-top: 10px;
-}
-
-.habilidades li {
-  background-color: white;
-  color: #0077b6;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-/* Projetos */
+/* ===========================
+          PROJETOS
+=========================== */
 .projetos {
   padding: 50px 20px;
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
 }
 
 .titulo-projetos {
   width: 100%;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.projeto {
-  background-color: white;
-  width: 280px;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
 }
 
-/* Efeito hover */
+/* CARD DO PROJETO */
+.projeto {
+  background: white;
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-top: 6px solid #00b4d8;
+}
+
+body.dark .projeto {
+  background: #112233;
+  color: white;
+  border-top: 6px solid #48cae4;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+}
+
+/* IMAGENS DOS PROJETOS */
+.projeto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ANIMAÇÃO HOVER (3D + Levantar) */
 .projeto:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
 }
 
+/* LINKS */
 .projeto a {
   display: inline-block;
   margin-top: 10px;
-  color: #0077b6;
   text-decoration: none;
   font-weight: bold;
+  color: #0077b6;
+}
+
+body.dark .projeto a {
+  color: #90e0ef;
 }
 
 .projeto a:hover {
   text-decoration: underline;
 }
 
-/* Rodapé */
+/* ===========================
+          FOOTER
+=========================== */
 footer {
-  background-color: #023e8a;
+  margin-top: 40px;
+  padding: 25px;
+  background: #023e8a;
   color: white;
-  padding: 30px 10px;
+  text-align: center;
 }
 
 footer a {
@@ -119,18 +137,42 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer p {
-  margin-top: 10px;
-  font-size: 0.9rem;
+/* BOTÃO DO MODO ESCURO */
+#toggle-dark {
+  margin-top: 20px;
+  background: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-  .perfil {
-    flex-direction: column;
-  }
+#toggle-dark:hover {
+  transform: scale(1.1);
+}
 
+body.dark #toggle-dark {
+  background: #1e2a38;
+  color: white;
+}
+
+/* ===========================
+        RESPONSIVIDADE
+=========================== */
+@media (max-width: 900px) {
+  .projeto {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
   .projeto {
     width: 90%;
+  }
+
+  .perfil {
+    flex-direction: column;
   }
 }
